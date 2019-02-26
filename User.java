@@ -3,15 +3,16 @@ import java.util.ArrayList;
 class User {
 
     private String name;
-    private Int id;
+    private Int idNumber;
     private ArrayList instrumentList;
 
+    Instrument.Guitar.Elctric colemanElectric = new Instrument.Guitar.electric();
     public User() {
     }
 
-    User(String name, Int id, ArrayList instrumentList){
+    User(String name, Int idNumber, ArrayList instrumentList){
         this.name = name;
-        this.id = id;
+        this.idNumber = idNumber;
         this.instrumentList = instrumentList;
     }
 
@@ -23,12 +24,12 @@ class User {
         this.name = name;
     }
 
-    public Int getId() {
-        return this.id;
+    public Int getidNumber() {
+        return this.idNumber;
     }
 
-    public void setId(Int id) {
-        this.id = id;
+    public void setidNumber(Int idNumber) {
+        this.idNumber = idNumber;
     }
 
     public ArrayList getInstrumentList() {

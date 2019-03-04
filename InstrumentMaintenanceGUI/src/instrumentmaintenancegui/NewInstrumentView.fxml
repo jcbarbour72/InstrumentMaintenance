@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instrumentmaintenancegui.UserViewController">
+    <children>
+      <Button fx:id="newUserInstrument" layoutX="63.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleNewInstButtonPressed" text="New" />
+      <Button fx:id="userViewExit" layoutX="21.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewExitlButtonPressed" text="Exit" />
+      <Button fx:id="userViewDeleteButton" layoutX="161.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewDeleteButtonPressed" text="Delete" />
+      <ListView fx:id="instrumentTableListView" layoutX="14.0" layoutY="80.0" prefHeight="362.0" prefWidth="200.0" />
+      <Pane layoutX="14.0" layoutY="20.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: SLATEGRAY;">
+         <children>
+            <Label fx:id="userLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" textAlignment="CENTER" textFill="#e8e2e2" />
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>

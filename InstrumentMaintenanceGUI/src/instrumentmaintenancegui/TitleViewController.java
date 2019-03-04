@@ -24,12 +24,27 @@ import javafx.stage.Stage;
 public class TitleViewController implements Initializable {
 
     @FXML ChoiceBox mainUserChoiceBox;
+    public static int selectedUser;
     
     @FXML
-    private void handleMainUserSelectButtonAction(ActionEvent event) {
+    private void handleMainUserSelectButtonAction(ActionEvent event) throws IOException {
         String selection;
         selection = mainUserChoiceBox.getValue().toString();
-        System.out.println("User: " + selection);
+        selection = selection.substring(0, 1);
+        selectedUser = Integer.parseInt(selection);
+        
+        Stage stage = InstrumentMaintenanceGUI.currentStage;
+        
+        Pane root = FXMLLoader.load(getClass().getResource("UserView.fxml"));
+        InstrumentMaintenanceGUI.scene = new Scene(root);
+        
+        stage.setScene(InstrumentMaintenanceGUI.scene);
+        stage.show();
+        
+        
+        
+        
+        
     }
     
     @FXML
@@ -54,6 +69,20 @@ public class TitleViewController implements Initializable {
         for(int i = 0; i < InstrumentMaintenanceGUI.users.size(); i++){
             mainUserChoiceBox.getItems().add(InstrumentMaintenanceGUI.users.get(i).toChoiceBoxString());
         }
-    }    
+    }
+
+    /**
+     * @return the selectedUser
+     */
+    public int getSelectedUser() {
+        return selectedUser;
+    }
+
+    /**
+     * @param selectedUser the selectedUser to set
+     */
+    public void setSelectedUser(int selectedUser) {
+        this.selectedUser = selectedUser;
+    }
     
 }

@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
@@ -22,22 +23,16 @@ import javafx.stage.Stage;
  *
  * @author Coleman Barbour
  */
-public class NewUserViewController implements Initializable {
+public class UserViewController implements Initializable {
 
     @FXML TextField newUserUsernameTextField;
+    @FXML Label userLabel;
+    
+    User current;
     
     @FXML
-    private void handleNewUserCreateButtonPressed(ActionEvent event) throws IOException {
-        String username;
-        username = newUserUsernameTextField.getText();
-        int curIndex;
-        curIndex = InstrumentMaintenanceGUI.users.size();
-        
-        User addUserTemp = new User(username,curIndex);
-        //System.out.println(addUserTemp.toChoiceBoxString());
-        InstrumentMaintenanceGUI.users.add(addUserTemp);
-        addUserTemp = null;
-        //System.out.println(addUserTemp.toChoiceBoxString());
+    private void handleUserViewExitlButtonPressed(ActionEvent event) throws IOException {
+    
         Stage stage = InstrumentMaintenanceGUI.currentStage;
         
         Pane root = FXMLLoader.load(getClass().getResource("TitleView.fxml"));
@@ -49,8 +44,9 @@ public class NewUserViewController implements Initializable {
     }
     
     @FXML
-    private void handNewUserCancelButtonPressed(ActionEvent event) throws IOException {
-        System.out.println("Cancel");
+    private void handleNewInstButtonPressed(ActionEvent event) throws IOException {
+        System.out.println("New Instrument");
+        
         Stage stage = InstrumentMaintenanceGUI.currentStage;
         
         Pane root = FXMLLoader.load(getClass().getResource("TitleView.fxml"));
@@ -58,12 +54,20 @@ public class NewUserViewController implements Initializable {
         
         stage.setScene(InstrumentMaintenanceGUI.scene);
         stage.show();
+    }
+    
+    @FXML
+    private void handleUserViewDeleteButtonPressed(ActionEvent event) {
+        System.out.println("Delete Instrument");
         
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        this.current = InstrumentMaintenanceGUI.users.get(TitleViewController.selectedUser);
+        userLabel.setText(this.current.toChoiceBoxString().substring(4)+"'s Instruments");
+        
     }    
     
 }

@@ -63,9 +63,20 @@ public class UserViewController implements Initializable {
     }
     
     @FXML
-    private void handleUserViewDeleteButtonPressed(ActionEvent event) {
+    private void handleUserViewDeleteButtonPressed(ActionEvent event) throws IOException {
         System.out.println("Delete Instrument");
+        int deleteIndex = instrumentTableListView.getSelectionModel().getSelectedIndex();
+        // TODO: Add ListSelectionListener to store the index of the object selected...
+        tempInstList = this.current.getInstrumentList();
+        tempInstList.remove(deleteIndex);
         
+        Stage stage = InstrumentMaintenanceGUI.currentStage;
+        
+        Pane root = FXMLLoader.load(getClass().getResource("UserView.fxml"));
+        InstrumentMaintenanceGUI.scene = new Scene(root);
+        
+        stage.setScene(InstrumentMaintenanceGUI.scene);
+        stage.show();
     }
     
     @Override
@@ -74,12 +85,15 @@ public class UserViewController implements Initializable {
         this.current = InstrumentMaintenanceGUI.users.get(TitleViewController.selectedUser);
         userLabel.setText(this.current.toChoiceBoxString().substring(4)+"'s Instruments");
         tempInstList = this.current.getInstrumentList();
+        
+        
         ArrayList<String> stringList = new ArrayList<>();
         for(int i = 0; i < tempInstList.size(); i++){
             stringList.add(tempInstList.get(i).getName());
         }
         
         instrumentTableListView.getItems().addAll(stringList);
+        
         
         
     }    

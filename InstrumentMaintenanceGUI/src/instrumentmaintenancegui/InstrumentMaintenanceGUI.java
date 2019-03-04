@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import instrumentmaintenancegui.User;
 
 /**
  *
@@ -19,28 +20,35 @@ import javafx.stage.Stage;
 
 
 public class InstrumentMaintenanceGUI extends Application {
-
-    static User test = new User("Default", 1);
+    
+    // static User test = new User("Bob", 1);
+    public static ArrayList<User> users = new ArrayList<>();
+    
+    public static Scene scene;
+    public static Stage currentStage;
             
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("TitleView.fxml"));
         
-        Scene scene = new Scene(root);
+        scene = new Scene(root);
+        currentStage = stage;
         
-        stage.setScene(scene);
-        stage.show();
+        currentStage.setScene(scene);
+        currentStage.show();
     }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        
+       
+        
         ArrayList testInstList = new ArrayList();
         Instrument testInstrument = new Instrument();
         testInstList.add(testInstrument);        
-        test.setInstrumentList(testInstList);
+        //test.setInstrumentList(testInstList);
 
 
         launch(args);

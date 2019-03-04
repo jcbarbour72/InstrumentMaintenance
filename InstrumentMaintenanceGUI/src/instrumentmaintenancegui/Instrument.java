@@ -32,10 +32,6 @@ class Instrument {
        // System.out.println("Instrument zero arg constructor.");
     }
     
-    public Instrument(Object[] params){
-        
-    }
-
     /**
      * @return the manufacturingYear
      */

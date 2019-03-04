@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instrumentmaintenancegui.NewInstViewController">
+    <children>
+      <Button fx:id="addInstrument" layoutX="63.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleAddButtonPressed" text="Add" />
+      <Button fx:id="newInstViewExit" layoutX="21.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleNewInstViewExitlButtonPressed" text="Exit" />
+      <Pane layoutX="14.0" layoutY="20.0" prefHeight="45.0" prefWidth="671.0" style="-fx-background-color: SLATEGRAY;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="151.0" text="New Instrument" textAlignment="CENTER" textFill="#e8e2e2" />
+         </children>
+      </Pane>
+      <Label layoutX="28.0" layoutY="72.0" prefHeight="17.0" prefWidth="151.0" text="Name:" />
+      <Label layoutX="232.0" layoutY="72.0" prefHeight="17.0" prefWidth="151.0" text="Manufacturing Year:" />
+      <TextField fx:id="manuYearTextField" layoutX="343.0" layoutY="68.0" />
+      <Label layoutX="283.0" layoutY="93.0" prefHeight="17.0" prefWidth="151.0" text="Condition:" />
+      <Label layoutX="26.0" layoutY="93.0" prefHeight="17.0" prefWidth="151.0" text="Instrument Type" />
+      <ChoiceBox fx:id="instrumentConditionChoiceBox" layoutX="343.0" layoutY="110.0" prefWidth="150.0" />
+      <TextField fx:id="instNameTextField" layoutX="70.0" layoutY="68.0" />
+      <ChoiceBox fx:id="instrumentTypeChoiceBox1" layoutX="70.0" layoutY="110.0" prefWidth="150.0" />
+      <Label layoutX="258.0" layoutY="151.0" text="Purchase Date:" />
+      <TextField fx:id="purchaseDate" layoutX="343.0" layoutY="147.0" />
+      <Label layoutX="28.0" layoutY="151.0" prefHeight="17.0" prefWidth="151.0" text="Guitar Type" />
+      <ChoiceBox fx:id="guitarTypeChoiceBox11" layoutX="70.0" layoutY="172.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

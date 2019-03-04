@@ -101,15 +101,12 @@ class User {
     /**
      * Add and Instrument to the current User.InstrumentList[]
      * 
-     * @param params An <code>Object[]<code> to pass in a set of parameters
-     * needed to initialize the intended <code>Instrument<code> with correct
-     * params for child class constructors.
      */
-    public void addInstrument(Object[] params){
+    public void addInstrument(){
         // Add a new instrement by calling all needed constructors
         // to instantiate a new instuement object of the selected type
         
-        Instrument CurrentInstrument = new Instrument(params);
+        Instrument CurrentInstrument = new Instrument();
         getInstrumentList().add(CurrentInstrument);
         
     }

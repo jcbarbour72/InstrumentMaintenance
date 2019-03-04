@@ -74,8 +74,12 @@ public class UserViewController implements Initializable {
         this.current = InstrumentMaintenanceGUI.users.get(TitleViewController.selectedUser);
         userLabel.setText(this.current.toChoiceBoxString().substring(4)+"'s Instruments");
         tempInstList = this.current.getInstrumentList();
+        ArrayList<String> stringList = new ArrayList<>();
+        for(int i = 0; i < tempInstList.size(); i++){
+            stringList.add(tempInstList.get(i).getName());
+        }
         
-        instrumentTableListView.getItems().addAll(tempInstList);
+        instrumentTableListView.getItems().addAll(stringList);
         
         
     }    

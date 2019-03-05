@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
@@ -8,14 +9,33 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instrumentmaintenancegui.UserViewController">
     <children>
-      <Button fx:id="newUserInstrument" layoutX="63.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleNewInstButtonPressed" text="New" />
-      <Button fx:id="userViewExit" layoutX="21.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewExitlButtonPressed" text="Exit" />
-      <Button fx:id="userViewDeleteButton" layoutX="161.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewDeleteButtonPressed" text="Delete" />
+      <Button fx:id="newUserInstrument" layoutX="64.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleNewInstButtonPressed" text="New" />
+      <Button fx:id="userViewExit" layoutX="16.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewExitlButtonPressed" text="Exit" />
+      <Button fx:id="userViewDeleteButton" layoutX="152.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewDeleteButtonPressed" text="Delete" />
       <ListView fx:id="instrumentTableListView" layoutX="14.0" layoutY="80.0" prefHeight="362.0" prefWidth="200.0" />
       <Pane layoutX="14.0" layoutY="20.0" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: SLATEGRAY;">
          <children>
-            <Label fx:id="userLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" textAlignment="CENTER" textFill="#e8e2e2" />
+            <Label fx:id="userLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" textAlignment="CENTER" textFill="WHITE" />
          </children>
       </Pane>
+      <Pane layoutX="250.0" layoutY="80.0" prefHeight="362.0" prefWidth="412.0" style="-fx-background-color: LIGHTGRAY;">
+         <children>
+            <Label layoutX="70.0" layoutY="14.0" text="Name:" textAlignment="RIGHT" />
+            <Label layoutX="17.0" layoutY="45.0" text="Purchase Date:" textAlignment="RIGHT" />
+            <TextField fx:id="instDetailsName1" layoutX="114.0" layoutY="40.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="215.0" layoutY="16.0" text="Mfr. Year:" textAlignment="RIGHT" />
+            <TextField fx:id="instDetailsName11" layoutX="279.0" layoutY="11.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="instDetailsName111" layoutX="279.0" layoutY="42.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="213.0" layoutY="47.0" text="Condition:" textAlignment="RIGHT" />
+            <TextField fx:id="instDetailsName12" layoutX="114.0" layoutY="9.0" prefHeight="27.0" prefWidth="89.0" />
+            <HBox layoutX="14.0" layoutY="81.0" prefHeight="268.0" prefWidth="382.0" style="-fx-background-color: WHITE;" />
+         </children></Pane>
+      <Pane layoutX="250.0" layoutY="20.0" prefHeight="45.0" prefWidth="412.0" style="-fx-background-color: SLATEGRAY;">
+         <children>
+            <Label fx:id="userLabel1" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="176.0" textAlignment="CENTER" textFill="#e8e2e2" />
+            <Label layoutX="150.0" layoutY="14.0" text="Instrument Details" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Button layoutX="578.0" layoutY="455.0" mnemonicParsing="false" text="Save Edits" />
     </children>
 </AnchorPane>

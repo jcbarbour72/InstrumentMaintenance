@@ -9,24 +9,24 @@
 
 <AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instrumentmaintenancegui.NewInstViewController">
     <children>
-      <Button fx:id="addInstrument" layoutX="63.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleAddButtonPressed" text="Add" />
+      <Button fx:id="addInstrument" layoutX="65.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleAddButtonPressed" text="Add" />
       <Button fx:id="newInstViewExit" layoutX="21.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleNewInstViewExitlButtonPressed" text="Exit" />
       <Pane layoutX="14.0" layoutY="20.0" prefHeight="45.0" prefWidth="671.0" style="-fx-background-color: SLATEGRAY;">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="151.0" text="New Instrument" textAlignment="CENTER" textFill="#e8e2e2" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="151.0" text="New Instrument" textAlignment="CENTER" textFill="WHITE" />
          </children>
       </Pane>
-      <Label layoutX="28.0" layoutY="72.0" prefHeight="17.0" prefWidth="151.0" text="Name:" />
-      <Label layoutX="232.0" layoutY="72.0" prefHeight="17.0" prefWidth="151.0" text="Manufacturing Year:" />
-      <TextField fx:id="manuYearTextField" layoutX="343.0" layoutY="68.0" />
-      <Label layoutX="283.0" layoutY="93.0" prefHeight="17.0" prefWidth="151.0" text="Condition:" />
-      <Label layoutX="26.0" layoutY="93.0" prefHeight="17.0" prefWidth="151.0" text="Instrument Type" />
-      <ChoiceBox fx:id="instrumentConditionChoiceBox" layoutX="343.0" layoutY="110.0" prefWidth="150.0" />
-      <TextField fx:id="instNameTextField" layoutX="70.0" layoutY="68.0" />
-      <ChoiceBox fx:id="instrumentTypeChoiceBox1" layoutX="70.0" layoutY="110.0" prefWidth="150.0" />
-      <Label layoutX="258.0" layoutY="151.0" text="Purchase Date:" />
-      <TextField fx:id="purchaseDate" layoutX="343.0" layoutY="147.0" />
-      <Label layoutX="28.0" layoutY="151.0" prefHeight="17.0" prefWidth="151.0" text="Guitar Type" />
-      <ChoiceBox fx:id="guitarTypeChoiceBox11" layoutX="70.0" layoutY="172.0" prefWidth="150.0" />
+      <Label layoutX="91.0" layoutY="76.0" prefHeight="17.0" prefWidth="151.0" text="Name:" />
+      <Label layoutX="340.0" layoutY="76.0" prefHeight="17.0" prefWidth="151.0" text="Manufacturing Year:" />
+      <TextField fx:id="manuYearTextField" layoutX="476.0" layoutY="71.0" />
+      <Label layoutX="402.0" layoutY="119.0" prefHeight="17.0" prefWidth="151.0" text="Condition:" />
+      <Label layoutX="26.0" layoutY="119.0" prefHeight="17.0" prefWidth="151.0" text="Instrument Type:" />
+      <ChoiceBox fx:id="instrumentConditionChoiceBox" layoutX="476.0" layoutY="114.0" prefHeight="27.0" prefWidth="167.0" />
+      <TextField fx:id="instNameTextField" layoutX="137.0" layoutY="71.0" />
+      <ChoiceBox fx:id="instrumentTypeChoiceBox1" layoutX="137.0" layoutY="114.0" prefHeight="27.0" prefWidth="167.0" />
+      <Label layoutX="375.0" layoutY="164.0" text="Purchase Date:" />
+      <TextField fx:id="purchaseDate" layoutX="476.0" layoutY="159.0" />
+      <Label layoutX="55.0" layoutY="164.0" prefHeight="17.0" prefWidth="151.0" text="Guitar Type:" />
+      <ChoiceBox fx:id="guitarTypeChoiceBox11" layoutX="137.0" layoutY="159.0" prefHeight="27.0" prefWidth="167.0" />
     </children>
 </AnchorPane>

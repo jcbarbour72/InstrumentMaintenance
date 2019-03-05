@@ -79,6 +79,8 @@ public class UserViewController implements Initializable {
         stage.show();
     }
     
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

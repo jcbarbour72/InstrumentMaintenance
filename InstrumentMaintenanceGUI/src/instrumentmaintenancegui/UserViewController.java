@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -83,19 +85,39 @@ public class UserViewController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // Set up the current user and instrument list
         this.current = InstrumentMaintenanceGUI.users.get(TitleViewController.selectedUser);
         userLabel.setText(this.current.toChoiceBoxString().substring(4)+"'s Instruments");
         tempInstList = this.current.getInstrumentList();
         
-        
+        // Convert Instrument List to a string list for table
         ArrayList<String> stringList = new ArrayList<>();
         for(int i = 0; i < tempInstList.size(); i++){
             stringList.add(tempInstList.get(i).getName());
         }
         
+        // Add the instruments to the list in the table
         instrumentTableListView.getItems().addAll(stringList);
         
+        // Set a selection listner for the Instrument List
+        instrumentTableListView.getSelectionModel().selectedItemProperty()
+				.addListener(new ChangeListener<String>() {
+                                    
+                                    
+
+					public void changed(
+							ObservableValue<? extends String> observable,
+							String oldValue, String newValue) {
+                                            
+                                            int instToIndex = stringList.indexOf(newValue);
+                                            Instrument currentInstrumentSelection = tempInstList.get(instToIndex);
+                                            
+                                            System.out.println(currentInstrumentSelection.toString());
+						// change the label text value to the newly selected
+						// item.
+						// label.setText("You Selected " + newValue);
+					}
+				});
         
         
     }    

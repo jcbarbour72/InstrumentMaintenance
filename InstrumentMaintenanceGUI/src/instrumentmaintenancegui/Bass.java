@@ -12,7 +12,7 @@ class Bass extends Guitar{
     /**
      * Variable Initializers
      */
-    private int style;
+    private String style;
     private int stringCount;
 
     /**
@@ -34,14 +34,14 @@ class Bass extends Guitar{
     /**
      * @return the style
      */
-    public int getStyle() {
+    public String getStyle() {
         return style;
     }
 
     /**
      * @param style the style to set
      */
-    public void setStyle(int style) {
+    public void setStyle(String style) {
         this.style = style;
     }
 

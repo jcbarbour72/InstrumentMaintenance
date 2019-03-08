@@ -58,47 +58,9 @@ public class UserViewController implements Initializable {
     @FXML CheckBox hasActivePickups;
     @FXML TextField fretBoardCondDateText;
     @FXML TextField nextConditionDate;
+    @FXML TextField purchaseDateText;
     
-
-//    /**
-//     * Instrument Class Variables
-//     */
-//    public int currManufacturingYear = -1;
-//    public int currCondition = -1;
-//    public int currInstrumentId = -1;
-//    public int currCareRating= -1;
-//    public String currName = "";
-//    public int currType = -1;
-//    public String currPurchaseDate = "";
-//    
-//    /**
-//     * Guitar Class Variables
-//     */
-//    public String currStringsLastReplacedDate = "";
-//    public String currStringsFutureReplacedDate = "";
-//    public String currLastSetupDate = "";
-//    public String currLastTrussRodAdjustmentDate = "";
-//    public Boolean currHasActivePickups = false;
-//    public String currLastFretboardConditioningDate = "";
-//    public String currNextFretboardConditiongDate = "";
-//    
-//    /**
-//     * Acoustic Class Variables
-//     */
-//    public int currHumidificationType = -1;
-//    public int currHumidificationDate = -1;
-//
-//    /**
-//     * Electric Class Variables
-//     */    
-//    public String currIntonationSetDate;
-//    
-//    /**
-//     * Bass Class Variables
-//     */
-//    public int currStyle = -1;
-//    public int currStringCount = -1;
-    
+ 
     // The currently selected user
     User current;
     // A temporary Instrument List
@@ -152,6 +114,103 @@ public class UserViewController implements Initializable {
         stage.show();
     }
     
+    @FXML
+    public void handleUserViewSaveEditsButton(ActionEvent event){
+        if(currentInstrumentSelection instanceof Acoustic){
+            System.out.println("Acoustic");
+            Acoustic thisAC = (Acoustic) currentInstrumentSelection;
+            
+            /**
+            * Set the guitar details
+            */
+            thisAC.setManufacturingYear(Integer.parseInt(instDetailsMfrYear.getText()));
+            thisAC.setCondition(Integer.parseInt(instCondition.getText()));
+            thisAC.setStringsLastReplacedDate(stringsLastReplacedText.getText());
+            thisAC.setStringsLastReplacedDate(stringsFutureReplaceText.getText());
+            thisAC.setLastSetupDate(lastSetupDateText.getText());
+            thisAC.setLastTrussRodAdjustmentDate(trussRodAdjustText.getText());
+            thisAC.setHasActivePickups(hasActivePickups.isSelected());
+            thisAC.setLastFretboardConditioningDate(fretBoardCondDateText.getText());
+            thisAC.setNextFretboardConditiongDate(nextConditionDate.getText());
+            thisAC.setPurchaseDate(purchaseDateText.getText());
+
+
+           /**
+            * Set the type specific variables for this instrument
+            */
+           thisAC.setHumidificationDate(Integer.parseInt(humidDate.getText()));
+           thisAC.setHumidificationType(humidType.getText());
+           
+            
+        } else if(currentInstrumentSelection instanceof Electric){
+            System.out.println("Electric");
+            Electric thisEG = (Electric) currentInstrumentSelection;
+            
+            /**
+            * Set the guitar details
+            */
+            thisEG.setManufacturingYear(Integer.parseInt(instDetailsMfrYear.getText()));
+            thisEG.setCondition(Integer.parseInt(instCondition.getText()));
+            thisEG.setStringsLastReplacedDate(stringsLastReplacedText.getText());
+            thisEG.setStringsLastReplacedDate(stringsFutureReplaceText.getText());
+            thisEG.setLastSetupDate(lastSetupDateText.getText());
+            thisEG.setLastTrussRodAdjustmentDate(trussRodAdjustText.getText());
+            thisEG.setHasActivePickups(hasActivePickups.isSelected());
+            thisEG.setLastFretboardConditioningDate(fretBoardCondDateText.getText());
+            thisEG.setNextFretboardConditiongDate(nextConditionDate.getText());
+            thisEG.setPurchaseDate(purchaseDateText.getText());
+            
+            /**
+            * Set the type specific variables for this instrument
+            */
+            thisEG.setIntonationSetDate(intonationTextField.getText());
+            
+        } else if(currentInstrumentSelection instanceof Bass){
+            System.out.println("Bass");
+            Bass thisB = (Bass) currentInstrumentSelection;
+            
+            /**
+            * Set the guitar details
+            */
+            thisB.setManufacturingYear(Integer.parseInt(instDetailsMfrYear.getText()));
+            thisB.setCondition(Integer.parseInt(instCondition.getText()));
+            thisB.setStringsLastReplacedDate(stringsLastReplacedText.getText());
+            thisB.setStringsLastReplacedDate(stringsFutureReplaceText.getText());
+            thisB.setLastSetupDate(lastSetupDateText.getText());
+            thisB.setLastTrussRodAdjustmentDate(trussRodAdjustText.getText());
+            thisB.setHasActivePickups(hasActivePickups.isSelected());
+            thisB.setLastFretboardConditioningDate(fretBoardCondDateText.getText());
+            thisB.setNextFretboardConditiongDate(nextConditionDate.getText());
+            thisB.setPurchaseDate(purchaseDateText.getText());
+            
+            /**
+             * Set the Bass details
+             */
+            thisB.setStyle(bassStyleText.getText());
+            thisB.setStringCount(Integer.parseInt(numberStringsText.getText()));
+            
+        } else{
+            System.out.println("Guitar");
+            Guitar thisGT = (Guitar) currentInstrumentSelection;
+            
+            /**
+            * Set the guitar details
+            */
+            thisGT.setManufacturingYear(Integer.parseInt(instDetailsMfrYear.getText()));
+            thisGT.setCondition(Integer.parseInt(instCondition.getText()));
+            thisGT.setStringsLastReplacedDate(stringsLastReplacedText.getText());
+            thisGT.setStringsLastReplacedDate(stringsFutureReplaceText.getText());
+            thisGT.setLastSetupDate(lastSetupDateText.getText());
+            thisGT.setLastTrussRodAdjustmentDate(trussRodAdjustText.getText());
+            thisGT.setHasActivePickups(hasActivePickups.isSelected());
+            thisGT.setLastFretboardConditioningDate(fretBoardCondDateText.getText());
+            thisGT.setNextFretboardConditiongDate(nextConditionDate.getText());
+            thisGT.setPurchaseDate(purchaseDateText.getText());
+            
+            
+        }
+    }
+    
     
     
     @Override
@@ -181,7 +240,7 @@ public class UserViewController implements Initializable {
                                             currentInstrumentSelection = tempInstList.get(instToIndex);
                                             
                                             System.out.println(currentInstrumentSelection.toString());
-                                            
+
                                             
                                             
                                             
@@ -192,6 +251,7 @@ public class UserViewController implements Initializable {
                                             if(currentInstrumentSelection instanceof Acoustic){
                                                 System.out.println("I'm Class " + currentInstrumentSelection.getClass().getSimpleName());
                                                 Acoustic thisAC = (Acoustic) currentInstrumentSelection;
+                                                int tmpHumidType;
                                                
                                                 /**
                                                  * Remove Items that don't apply
@@ -211,13 +271,14 @@ public class UserViewController implements Initializable {
                                                 guitarType.setText("Acoustic");
                                                 InstrumentId.setText(Integer.toString(thisAC.getInstrumentId()));
                                                 instDetailsName12.setText(thisAC.getName());
+                                                purchaseDateText.setText(thisAC.getPurchaseDate());
                                                 instDetailsMfrYear.setText(Integer.toString(thisAC.getManufacturingYear()));
                                                 instCondition.setText(Integer.toString(thisAC.getCondition()));
                                                 stringsLastReplacedText.setText(thisAC.getStringsLastReplacedDate());
                                                 stringsFutureReplaceText.setText(thisAC.getStringsFutureReplacedDate());
                                                 lastSetupDateText.setText(thisAC.getLastSetupDate());
                                                 trussRodAdjustText.setText(thisAC.getLastTrussRodAdjustmentDate());
-                                                hasActivePickups.setIndeterminate(thisAC.getHasActivePickups());
+                                                hasActivePickups.setSelected(thisAC.getHasActivePickups());
                                                 fretBoardCondDateText.setText(thisAC.getLastFretboardConditioningDate());
                                                 nextConditionDate.setText(thisAC.getNextFretboardConditiongDate());
 
@@ -227,7 +288,8 @@ public class UserViewController implements Initializable {
                                                  * Set the type specific variables for this instrument
                                                  */
                                                 humidDate.setText(Integer.toString(thisAC.getHumidificationDate()));
-                                                humidType.setText(Integer.toString(thisAC.getHumidificationType()));                                                
+                                                humidType.setText(thisAC.getHumidificationType());
+                                                                                             
                                                     
                                             } else if(currentInstrumentSelection instanceof Electric){
                                                 System.out.println("I'm Class " + currentInstrumentSelection.getClass().getSimpleName());
@@ -251,6 +313,7 @@ public class UserViewController implements Initializable {
                                                 guitarType.setText("Electric");
                                                 InstrumentId.setText(Integer.toString(thisEG.getInstrumentId()));
                                                 instDetailsName12.setText(thisEG.getName());
+                                                purchaseDateText.setText(thisEG.getPurchaseDate());
                                                 instDetailsMfrYear.setText(Integer.toString(thisEG.getManufacturingYear()));
                                                 instCondition.setText(Integer.toString(thisEG.getCondition()));
                                                 stringsLastReplacedText.setText(thisEG.getStringsLastReplacedDate());
@@ -290,6 +353,7 @@ public class UserViewController implements Initializable {
                                                 guitarType.setText("Bass");
                                                 InstrumentId.setText(Integer.toString(thisB.getInstrumentId()));
                                                 instDetailsName12.setText(thisB.getName());
+                                                purchaseDateText.setText(thisB.getPurchaseDate());
                                                 instDetailsMfrYear.setText(Integer.toString(thisB.getManufacturingYear()));
                                                 instCondition.setText(Integer.toString(thisB.getCondition()));
                                                 stringsLastReplacedText.setText(thisB.getStringsLastReplacedDate());
@@ -305,7 +369,7 @@ public class UserViewController implements Initializable {
                                                 /**
                                                  * Set the type specific variables for this instrument
                                                  */
-                                                bassStyleText.setText(Integer.toString(thisB.getStyle()));
+                                                bassStyleText.setText(thisB.getStyle());
                                                 numberStringsText.setText(Integer.toString(thisB.getStringCount()));
 
                                             }else{
@@ -330,6 +394,7 @@ public class UserViewController implements Initializable {
                                                 guitarType.setText("Guitar");
                                                 InstrumentId.setText(Integer.toString(thisGT.getInstrumentId()));
                                                 instDetailsName12.setText(thisGT.getName());
+                                                purchaseDateText.setText(thisGT.getPurchaseDate());
                                                 instDetailsMfrYear.setText(Integer.toString(thisGT.getManufacturingYear()));
                                                 instCondition.setText(Integer.toString(thisGT.getCondition()));
                                                 stringsLastReplacedText.setText(thisGT.getStringsLastReplacedDate());
@@ -342,6 +407,8 @@ public class UserViewController implements Initializable {
 
                                             }
                                         }
+                                        
+                                       
                                         
 				});
         

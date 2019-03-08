@@ -65,6 +65,7 @@ public class NewInstViewController implements Initializable {
             this.tempGtr.setPurchaseDate(purchaseDate.getText());
             
             this.current.getInstrumentList().add(tempGtr);
+            this.tempGtr.setInstrumentId(current.getInstrumentList().indexOf(this.tempGtr));
             
           
         } else if (instrumentTypeChoiceBox1.getValue() == "INSTRUMENT_GUITAR" && guitarTypeChoiceBox11.getValue() == "Acoustic"){
@@ -75,6 +76,7 @@ public class NewInstViewController implements Initializable {
             this.tempAGtr.setPurchaseDate(purchaseDate.getText());
           
             this.current.getInstrumentList().add(tempAGtr);
+            this.tempAGtr.setInstrumentId(current.getInstrumentList().indexOf(this.tempAGtr));
             
         } else if (instrumentTypeChoiceBox1.getValue() == "INSTRUMENT_GUITAR" && guitarTypeChoiceBox11.getValue() == "Electric"){
             this.tempEGtr.setType(1);
@@ -84,6 +86,7 @@ public class NewInstViewController implements Initializable {
             this.tempEGtr.setPurchaseDate(purchaseDate.getText());
           
             this.current.getInstrumentList().add(tempEGtr);
+            this.tempEGtr.setInstrumentId(current.getInstrumentList().indexOf(this.tempEGtr));
             
         } else if (instrumentTypeChoiceBox1.getValue() == "INSTRUMENT_GUITAR" && guitarTypeChoiceBox11.getValue() == "Bass"){
             this.tempBGtr.setType(1);
@@ -93,6 +96,7 @@ public class NewInstViewController implements Initializable {
             this.tempBGtr.setPurchaseDate(purchaseDate.getText());
           
             this.current.getInstrumentList().add(tempBGtr);
+            this.tempBGtr.setInstrumentId(current.getInstrumentList().indexOf(this.tempBGtr));
             
         } else if(instrumentTypeChoiceBox1.getValue() == "INSTRUMENT_OTHER" && guitarTypeChoiceBox11.getValue() == ""){
             this.tempIns.setType(2);
@@ -102,6 +106,7 @@ public class NewInstViewController implements Initializable {
             this.tempIns.setPurchaseDate(purchaseDate.getText());
           
             this.current.getInstrumentList().add(tempIns);
+            this.tempIns.setInstrumentId(current.getInstrumentList().indexOf(this.tempIns));
             
         } else {
             this.tempGtr.setType(1);
@@ -111,6 +116,8 @@ public class NewInstViewController implements Initializable {
             this.tempGtr.setPurchaseDate(purchaseDate.getText());
             
             this.current.getInstrumentList().add(tempGtr);
+            this.tempGtr.setInstrumentId(current.getInstrumentList().indexOf(this.tempGtr));
+            
           
         }
         

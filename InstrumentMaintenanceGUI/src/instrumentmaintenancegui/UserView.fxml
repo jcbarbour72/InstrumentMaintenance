@@ -22,7 +22,7 @@
          <children>
             <Label layoutX="70.0" layoutY="14.0" text="Name:" textAlignment="RIGHT" />
             <Label layoutX="17.0" layoutY="45.0" text="Purchase Date:" textAlignment="RIGHT" />
-            <TextField fx:id="instDetailsName1" layoutX="114.0" layoutY="40.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="purchaseDateText" layoutX="114.0" layoutY="40.0" prefHeight="27.0" prefWidth="89.0" />
             <Label layoutX="243.0" layoutY="16.0" text="Mfr. Year:" textAlignment="RIGHT" />
             <TextField fx:id="instDetailsMfrYear" layoutX="314.0" layoutY="11.0" prefHeight="27.0" prefWidth="89.0" />
             <TextField fx:id="instCondition" layoutX="314.0" layoutY="42.0" prefHeight="27.0" prefWidth="89.0" />
@@ -49,14 +49,14 @@
             <Label layoutX="22.0" layoutY="192.0" text="Fret Brd Cnd:" textAlignment="RIGHT" />
             <Label fx:id="InstrumentId" layoutX="142.0" layoutY="74.0" />
             <Label fx:id="careRating" layoutX="342.0" layoutY="76.0" prefHeight="17.0" prefWidth="33.0" />
-            <TextField fx:id="humidType" layoutX="315.0" layoutY="246.0" prefHeight="27.0" prefWidth="89.0" />
-            <Label layoutX="219.0" layoutY="249.0" text="Humid. Type:" textAlignment="RIGHT" />
+            <Label layoutX="219.0" layoutY="249.0" text="Humid Type:" textAlignment="RIGHT" />
             <TextField fx:id="bassStyleText" layoutX="114.0" layoutY="244.0" prefHeight="27.0" prefWidth="89.0" />
             <Label fx:id="bassStyleLabel" layoutX="36.0" layoutY="247.0" text="Bass Style:" textAlignment="RIGHT" />
             <TextField fx:id="numberStringsText" layoutX="114.0" layoutY="272.0" prefHeight="27.0" prefWidth="89.0" />
             <Label fx:id="numberStringsLabel" layoutX="5.0" layoutY="276.0" text="Number Strings:" textAlignment="RIGHT" />
             <Label fx:id="guitarType" layoutX="125.0" layoutY="105.0" text="GuitarType" />
             <CheckBox fx:id="hasActivePickups" layoutX="289.0" layoutY="163.0" mnemonicParsing="false" text="Active Pickups" />
+            <TextField fx:id="humidType" layoutX="315.0" layoutY="246.0" prefHeight="27.0" prefWidth="89.0" />
          </children></Pane>
       <Pane layoutX="250.0" layoutY="20.0" prefHeight="45.0" prefWidth="412.0" style="-fx-background-color: SLATEGRAY;">
          <children>
@@ -64,6 +64,6 @@
             <Label layoutX="150.0" layoutY="14.0" text="Instrument Details" textFill="WHITE" />
          </children>
       </Pane>
-      <Button layoutX="578.0" layoutY="455.0" mnemonicParsing="false" text="Save Edits" />
+      <Button fx:id="userViewSaveEdits" layoutX="578.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleUserViewSaveEditsButton" text="Save Edits" />
     </children>
 </AnchorPane>

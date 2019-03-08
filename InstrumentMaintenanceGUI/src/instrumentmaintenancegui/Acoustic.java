@@ -12,7 +12,7 @@ class Acoustic extends Guitar {
     /**
      * Variable Initializers
      */
-    private int humidificationType;
+    private String humidificationType;
     private int humidificationDate;
 
     /**
@@ -30,14 +30,14 @@ class Acoustic extends Guitar {
     /**
      * @return the humidificationType
      */
-    public int getHumidificationType() {
+    public String getHumidificationType() {
         return humidificationType;
     }
 
     /**
      * @param humidificationType the humidificationType to set
      */
-    public void setHumidificationType(int humidificationType) {
+    public void setHumidificationType(String humidificationType) {
         this.humidificationType = humidificationType;
     }
 

@@ -3,6 +3,8 @@
  */
 package instrumentmaintenancegui;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author Coleman Barbour
@@ -129,4 +131,5 @@ class Instrument {
     public void setPurchaseDate(String purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
+    
 }

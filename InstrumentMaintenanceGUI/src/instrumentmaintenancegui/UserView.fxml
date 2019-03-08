@@ -23,12 +23,40 @@
             <Label layoutX="70.0" layoutY="14.0" text="Name:" textAlignment="RIGHT" />
             <Label layoutX="17.0" layoutY="45.0" text="Purchase Date:" textAlignment="RIGHT" />
             <TextField fx:id="instDetailsName1" layoutX="114.0" layoutY="40.0" prefHeight="27.0" prefWidth="89.0" />
-            <Label layoutX="215.0" layoutY="16.0" text="Mfr. Year:" textAlignment="RIGHT" />
-            <TextField fx:id="instDetailsName11" layoutX="279.0" layoutY="11.0" prefHeight="27.0" prefWidth="89.0" />
-            <TextField fx:id="instDetailsName111" layoutX="279.0" layoutY="42.0" prefHeight="27.0" prefWidth="89.0" />
-            <Label layoutX="213.0" layoutY="47.0" text="Condition:" textAlignment="RIGHT" />
+            <Label layoutX="243.0" layoutY="16.0" text="Mfr. Year:" textAlignment="RIGHT" />
+            <TextField fx:id="instDetailsMfrYear" layoutX="314.0" layoutY="11.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="instCondition" layoutX="314.0" layoutY="42.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="241.0" layoutY="47.0" text="Condition:" textAlignment="RIGHT" />
             <TextField fx:id="instDetailsName12" layoutX="114.0" layoutY="9.0" prefHeight="27.0" prefWidth="89.0" />
-            <HBox layoutX="14.0" layoutY="81.0" prefHeight="268.0" prefWidth="382.0" style="-fx-background-color: WHITE;" />
+            <Label layoutX="221.0" layoutY="107.0" text="Str Last Repl:" textAlignment="RIGHT" />
+            <TextField fx:id="stringsLastReplacedText" layoutX="314.0" layoutY="102.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="234.0" layoutY="76.0" text="Car Rating:" textAlignment="RIGHT" />
+            <Label layoutX="74.0" layoutY="105.0" text="Type:" textAlignment="RIGHT" />
+            <Label layoutX="31.0" layoutY="74.0" text="InstrumentId:" textAlignment="RIGHT" />
+            <Label layoutX="6.0" layoutY="134.0" text="Last Setup Date:" textAlignment="RIGHT" />
+            <Label layoutX="19.0" layoutY="163.0" text="Truss Rod Adj:" textAlignment="RIGHT" />
+            <TextField fx:id="trussRodAdjustText" layoutX="114.0" layoutY="158.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="207.0" layoutY="134.0" text="Str Future Repl:" textAlignment="RIGHT" />
+            <TextField fx:id="stringsFutureReplaceText" layoutX="314.0" layoutY="131.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="lastSetupDateText" layoutX="114.0" layoutY="129.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="fretBoardCondDateText" layoutX="114.0" layoutY="187.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="222.0" layoutY="221.0" text="Humid. Date:" textAlignment="RIGHT" />
+            <TextField fx:id="humidDate" layoutX="314.0" layoutY="218.0" prefHeight="27.0" prefWidth="89.0" />
+            <TextField fx:id="intonationTextField" layoutX="314.0" layoutY="189.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label fx:id="intonationLabel" layoutX="211.0" layoutY="194.0" text="Intonation Set:" textAlignment="RIGHT" />
+            <TextField fx:id="nextConditionDate" layoutX="114.0" layoutY="216.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="17.0" layoutY="221.0" text="Nxt Cnd Date:" textAlignment="RIGHT" />
+            <Label layoutX="22.0" layoutY="192.0" text="Fret Brd Cnd:" textAlignment="RIGHT" />
+            <Label fx:id="InstrumentId" layoutX="142.0" layoutY="74.0" />
+            <Label fx:id="careRating" layoutX="342.0" layoutY="76.0" prefHeight="17.0" prefWidth="33.0" />
+            <TextField fx:id="instDetailsName1111111" layoutX="315.0" layoutY="246.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label layoutX="219.0" layoutY="249.0" text="Humid. Type:" textAlignment="RIGHT" />
+            <TextField fx:id="bassStyleText" layoutX="114.0" layoutY="244.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label fx:id="bassStyleLabel" layoutX="36.0" layoutY="247.0" text="Bass Style:" textAlignment="RIGHT" />
+            <TextField fx:id="numberStringsText" layoutX="114.0" layoutY="272.0" prefHeight="27.0" prefWidth="89.0" />
+            <Label fx:id="numberStringsLabel" layoutX="5.0" layoutY="276.0" text="Number Strings:" textAlignment="RIGHT" />
+            <Label fx:id="guitarType" layoutX="125.0" layoutY="105.0" text="GuitarType" />
+            <CheckBox fx:id="hasActivePickups" layoutX="289.0" layoutY="163.0" mnemonicParsing="false" text="Active Pickups" />
          </children></Pane>
       <Pane layoutX="250.0" layoutY="20.0" prefHeight="45.0" prefWidth="412.0" style="-fx-background-color: SLATEGRAY;">
          <children>

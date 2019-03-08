@@ -26,6 +26,9 @@ import instrumentmaintenancegui.Acoustic;
 import instrumentmaintenancegui.Electric;
 import instrumentmaintenancegui.Bass;
 import instrumentmaintenancegui.Instrument;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import javafx.scene.control.CheckBox;
 
 
@@ -115,7 +118,7 @@ public class UserViewController implements Initializable {
     }
     
     @FXML
-    public void handleUserViewSaveEditsButton(ActionEvent event){
+    public void handleUserViewSaveEditsButton(ActionEvent event) throws FileNotFoundException, IOException{
         if(currentInstrumentSelection instanceof Acoustic){
             System.out.println("Acoustic");
             Acoustic thisAC = (Acoustic) currentInstrumentSelection;
@@ -209,6 +212,25 @@ public class UserViewController implements Initializable {
             
             
         }
+        
+                try {
+                    System.out.println("Trying Serialization");
+			// write object to file
+			FileOutputStream fos = new FileOutputStream("InstMntTrkr.ser");
+			ObjectOutputStream oos = new ObjectOutputStream(fos);
+			oos.writeObject(InstrumentMaintenanceGUI.users);
+			oos.close();
+
+			
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+                
+                System.out.println("Finished Serialization");
+        
     }
     
     

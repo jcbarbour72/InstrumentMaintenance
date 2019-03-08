@@ -65,6 +65,8 @@ public class TitleViewController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
         // TODO
         for(int i = 0; i < InstrumentMaintenanceGUI.users.size(); i++){
             mainUserChoiceBox.getItems().add(InstrumentMaintenanceGUI.users.get(i).toChoiceBoxString());

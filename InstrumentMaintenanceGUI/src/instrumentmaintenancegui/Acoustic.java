@@ -3,11 +3,13 @@
  */
 package instrumentmaintenancegui;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author Coleman Barbour
  */
-class Acoustic extends Guitar {
+class Acoustic extends Guitar implements Serializable{
     
     /**
      * Variable Initializers

@@ -3,13 +3,14 @@
  */
 package instrumentmaintenancegui;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * 
  * @author Coleman Barbour
  */
-class User {
+class User implements Serializable{
 
     /**
      * Variable Initializers

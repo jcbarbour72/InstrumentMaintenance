@@ -12,6 +12,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import instrumentmaintenancegui.User;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 
 /**
  *
@@ -21,7 +25,7 @@ import instrumentmaintenancegui.User;
 
 public class InstrumentMaintenanceGUI extends Application {
     
-    // static User test = new User("Bob", 1);
+    
     public static ArrayList<User> users = new ArrayList<>();
     
     public static Scene scene;
@@ -29,6 +33,9 @@ public class InstrumentMaintenanceGUI extends Application {
             
     @Override
     public void start(Stage stage) throws Exception {
+        
+        
+        
         Parent root = FXMLLoader.load(getClass().getResource("TitleView.fxml"));
         
         scene = new Scene(root);
@@ -42,13 +49,31 @@ public class InstrumentMaintenanceGUI extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+        try {
+			
+
+			// read object from file
+			FileInputStream fis = new FileInputStream("InstMntTrkr.ser");
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			users = (ArrayList) ois.readObject();
+			ois.close();
+
+
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} 
        
         
         ArrayList testInstList = new ArrayList();
         Instrument testInstrument = new Instrument();
         testInstList.add(testInstrument);        
         //test.setInstrumentList(testInstList);
+        
+		       
 
 
         launch(args);

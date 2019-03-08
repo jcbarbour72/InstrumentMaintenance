@@ -60,44 +60,44 @@ public class UserViewController implements Initializable {
     @FXML TextField nextConditionDate;
     
 
-    /**
-     * Instrument Class Variables
-     */
-    public int currManufacturingYear = -1;
-    public int currCondition = -1;
-    public int currInstrumentId = -1;
-    public int currCareRating= -1;
-    public String currName = "";
-    public int currType = -1;
-    public String currPurchaseDate = "";
-    
-    /**
-     * Guitar Class Variables
-     */
-    public String currStringsLastReplacedDate = "";
-    public String currStringsFutureReplacedDate = "";
-    public String currLastSetupDate = "";
-    public String currLastTrussRodAdjustmentDate = "";
-    public Boolean currHasActivePickups = false;
-    public String currLastFretboardConditioningDate = "";
-    public String currNextFretboardConditiongDate = "";
-    
-    /**
-     * Acoustic Class Variables
-     */
-    public int currHumidificationType = -1;
-    public int currHumidificationDate = -1;
-
-    /**
-     * Electric Class Variables
-     */    
-    public String currIntonationSetDate;
-    
-    /**
-     * Bass Class Variables
-     */
-    public int currStyle = -1;
-    public int currStringCount = -1;
+//    /**
+//     * Instrument Class Variables
+//     */
+//    public int currManufacturingYear = -1;
+//    public int currCondition = -1;
+//    public int currInstrumentId = -1;
+//    public int currCareRating= -1;
+//    public String currName = "";
+//    public int currType = -1;
+//    public String currPurchaseDate = "";
+//    
+//    /**
+//     * Guitar Class Variables
+//     */
+//    public String currStringsLastReplacedDate = "";
+//    public String currStringsFutureReplacedDate = "";
+//    public String currLastSetupDate = "";
+//    public String currLastTrussRodAdjustmentDate = "";
+//    public Boolean currHasActivePickups = false;
+//    public String currLastFretboardConditioningDate = "";
+//    public String currNextFretboardConditiongDate = "";
+//    
+//    /**
+//     * Acoustic Class Variables
+//     */
+//    public int currHumidificationType = -1;
+//    public int currHumidificationDate = -1;
+//
+//    /**
+//     * Electric Class Variables
+//     */    
+//    public String currIntonationSetDate;
+//    
+//    /**
+//     * Bass Class Variables
+//     */
+//    public int currStyle = -1;
+//    public int currStringCount = -1;
     
     // The currently selected user
     User current;
@@ -183,9 +183,7 @@ public class UserViewController implements Initializable {
                                             System.out.println(currentInstrumentSelection.toString());
                                             
                                             
-                                            if(instDetailsMfrYear == null){
-                                                instDetailsMfrYear.setVisible(false);
-                                            }
+                                            
                                             
 
                                             /**
@@ -199,10 +197,9 @@ public class UserViewController implements Initializable {
                                                  * Remove Items that don't apply
                                                  */
                                                 bassStyleText.setVisible(false);
-                                                bassStyleLabel.setVisible(false);
                                                 numberStringsLabel.setVisible(false);
                                                 numberStringsText.setVisible(false);
-                                                intonationLabel.setVisible(false);
+                                                bassStyleLabel.setVisible(false);
                                                 intonationLabel.setVisible(false);
                                                 intonationTextField.setVisible(false);
                                                 humidDate.setVisible(true);
@@ -243,7 +240,6 @@ public class UserViewController implements Initializable {
                                                 bassStyleLabel.setVisible(false);
                                                 numberStringsLabel.setVisible(false);
                                                 numberStringsText.setVisible(false);
-                                                intonationLabel.setVisible(false);
                                                 intonationLabel.setVisible(true);
                                                 intonationTextField.setVisible(true);
                                                 humidDate.setVisible(false);
@@ -284,7 +280,6 @@ public class UserViewController implements Initializable {
                                                 numberStringsLabel.setVisible(true);
                                                 numberStringsText.setVisible(true);
                                                 intonationLabel.setVisible(false);
-                                                intonationLabel.setVisible(false);
                                                 intonationTextField.setVisible(false);
                                                 humidDate.setVisible(false);
                                                 humidType.setVisible(false);
@@ -324,7 +319,6 @@ public class UserViewController implements Initializable {
                                                 bassStyleLabel.setVisible(false);
                                                 numberStringsLabel.setVisible(false);
                                                 numberStringsText.setVisible(false);
-                                                intonationLabel.setVisible(false);
                                                 intonationLabel.setVisible(false);
                                                 intonationTextField.setVisible(false);
                                                 humidDate.setVisible(false);

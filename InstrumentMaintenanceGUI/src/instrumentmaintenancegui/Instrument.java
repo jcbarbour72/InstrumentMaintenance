@@ -17,7 +17,7 @@ class Instrument {
     private int manufacturingYear;
     private int condition;
     private int instrumentId;
-    private int careRating;
+    private int careRating = 0;
     private String name;
     private int type;
     private String purchaseDate;

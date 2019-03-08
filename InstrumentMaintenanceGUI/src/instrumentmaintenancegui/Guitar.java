@@ -12,13 +12,13 @@ class Guitar extends Instrument{
     /**
      *  Variable Initializers
      */
-    private String stringsLastReplacedDate;
-    private String stringsFutureReplacedDate;
-    private String lastSetupDate;
-    private String lastTrussRodAdjustmentDate;
-    private Boolean hasActivePickups;
-    private String lastFretboardConditioningDate;
-    private String nextFretboardConditiongDate;
+    private String stringsLastReplacedDate = "";
+    private String stringsFutureReplacedDate = "";
+    private String lastSetupDate = "";
+    private String lastTrussRodAdjustmentDate = "";
+    private Boolean hasActivePickups = false;
+    private String lastFretboardConditioningDate = "";
+    private String nextFretboardConditiongDate = "";
 
     /**
      * Constructor

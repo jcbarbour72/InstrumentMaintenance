@@ -1,6 +1,3 @@
-/**
- * 
- */
 package instrumentmaintenancegui;
 
 import java.io.Serializable;
@@ -100,7 +97,7 @@ class User implements Serializable{
     }
     
     /**
-     * Add and Instrument to the current User.InstrumentList[]
+     * Add an Instrument to the current User.InstrumentList[]
      * 
      */
     public void addInstrument(){

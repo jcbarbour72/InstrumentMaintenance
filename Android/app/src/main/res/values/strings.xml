@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">InstrumentMaintenanceAndroid</string>
+
+    <string-array name="userIds">
+        <item>"Coleman"</item>
+        <item>"Dom"</item>
+        <item>"Alistair"</item>
+    </string-array>
+
+</resources>
